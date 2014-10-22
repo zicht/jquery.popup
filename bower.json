@@ -1,0 +1,19 @@
+{
+  "name": "zicht-jquery-popup",
+  "version": "1.0.0",
+  "authors": [
+    "Joppe Aarts <joppe@zicht.nl>"
+  ],
+  "description": "Popup",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8"
+  }
+}
