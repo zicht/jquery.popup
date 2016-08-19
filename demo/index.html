@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zicht jQuery Popup</title>
+
+        <link rel="stylesheet" type="text/css" href="../vendor/bootstrap-css/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../src/jquery.popup.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>jQuery poplup plugin - Demo page</h1>
+                <p>Read the <a href="../README.md">readme</a> for basic usage.</p>
+            </header>
+
+            <article>
+                <h1>Example</h1>
+                <p><em>In this example all anchors with a class `js-popup` will open in a popup.</em></p>
+                <pre>$('a.js-popup').popup([options]);</pre>
+                Available options:
+                <pre>{
+    name: 'New window',
+    width: 400,
+    height: 400
+}</pre>
+                <p>Lorem ipsum dolor sit amet, consectetur <a href="http://www.zicht.nl" class="js-popup">adipisicing</a> elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
+                <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
+                <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
+
+                <script type="text/javascript">
+                    $('.js-popup').popup();
+                </script>
+            </article>
+        </div>
+    </body>
+</html>
