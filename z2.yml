@@ -1,0 +1,39 @@
+# @version ">=2.0"
+plugins: ['core', 'sass', 'zsass']
+
+sass:
+    dirs:
+        - demo
+
+tasks:
+    package.npm:
+        yield: true
+        do:
+            - npm install
+
+    package.bower:
+        yield: true
+        pre:
+            - @package.npm
+        do:
+            - node_modules/bower/bin/bower install
+
+    package.lint:
+        pre:
+            - @package.npm
+            - @package.bower
+        do:
+            - node node_modules/jshint/bin/jshint --config ./vendor/zicht-jshint/.jshintrc ./src
+            - node node_modules/jscs/bin/jscs --config ./vendor/zicht-jscs/.jscsrc ./src
+
+    package.update:
+        do:
+            - @package.npm
+            - @package.bower
+            - @zsass.update
+
+    package.karma:
+        pre:
+            - @package.npm
+        do:
+            - node node_modules/karma/bin/karma start test/karma.conf.js --single-run --no-auto-watch --reporters dots

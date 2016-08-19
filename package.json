@@ -1,0 +1,12 @@
+{
+  "name": "zicht-jquery-popup",
+  "version": "0.0.0",
+  "scripts": {
+    "bower-install": "node_modules/bower/bin/bower install"
+  },
+  "devDependencies": {
+    "bower": "^1.7.2",
+    "jscs": "^2.7.0",
+    "jshint": "^2.8.0"
+  }
+}

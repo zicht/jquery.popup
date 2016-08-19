@@ -13,6 +13,10 @@
         "test",
         "tests"
     ],
+    "devDependencies": {
+        "zicht-jscs": "latest",
+        "zicht-jshint": "latest"
+    },
     "dependencies": {
         "jquery": "~1"
     }
