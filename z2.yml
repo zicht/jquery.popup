@@ -31,9 +31,3 @@ tasks:
             - @package.npm
             - @package.bower
             - @zsass.update
-
-    package.karma:
-        pre:
-            - @package.npm
-        do:
-            - node node_modules/karma/bin/karma start test/karma.conf.js --single-run --no-auto-watch --reporters dots
