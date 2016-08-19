@@ -1,4 +1,5 @@
 /*global jQuery*/
+// jscs:disable requireTemplateStrings
 
 (function ($) {
     'use strict';
@@ -17,13 +18,9 @@
      */
     function popup(url, name, width, height) {
         var $win = $(window),
-            left = ($win.width()  - width)  / 2,
+            left = ($win.width() - width) / 2,
             top = ($win.height() - height) / 2,
-            opts = 'status=1' +
-                ',width='  + width  +
-                ',height=' + height +
-                ',top='    + top    +
-                ',left='   + left;
+            opts = 'status=1' + ',width=' + width + ',height=' + height + ',top=' + top + ',left=' + left;
 
         window.open(url, name, opts);
     }
