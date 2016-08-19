@@ -25,6 +25,7 @@
         window.open(url, name, opts);
     }
 
+    // Make sure not to overwrite an existing global
     if (undefined !== $.popup) {
         $.zpopup = popup;
     } else {
