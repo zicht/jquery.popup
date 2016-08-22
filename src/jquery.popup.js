@@ -22,7 +22,7 @@
         var $win = $(window),
             left = ($win.width() - width) / 2,
             top = ($win.height() - height) / 2,
-            opts = 'status=1' + ',width=' + width + ',height=' + height + ',top=' + top + ',left=' + left;
+            opts = 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left;
 
         if ('' !== features) {
             opts += ',' + features;
