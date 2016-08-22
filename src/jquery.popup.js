@@ -38,8 +38,12 @@
         $.popup = popup;
     }
 
-    $.fn.popup = function (options) {
-        options = $.extend({}, defaultOptions, options || {});
+    /**
+     * @param {object} [config]
+     * @returns {jQuery}
+     */
+    $.fn.popup = function (config) {
+        var options = $.extend({}, defaultOptions, config || {});
 
         return this.each(function () {
             var $anchor = $(this),
