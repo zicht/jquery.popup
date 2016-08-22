@@ -1,45 +1,30 @@
 # Zicht Image Preloader
 
-With this jQuery plugin you can preload images.
+With this jQuery plugin you can easily open new broser windows.
 
 Usage
 
 ```javascript
-// preload all img tags
-$('img').imagePreloader({
-    finish: function (status) {
-        console.log('preload finished, total=' + status.total + '; loaded=' + status.loaded + '; failed=' + status.failed);
-    }
-});
-
-// preload image paths
-$.imagePathPreloader([
-    'http://lorempixel.com/400/200/sports/1/',
-    'http://lorempixel.com/400/200/sports/2/',
-    'http://lorempixel.com/400/200/sports/3/',
-], {
-    finish: function (status) {
-        console.log('preload finished, total=' + status.total + '; loaded=' + status.loaded + '; failed=' + status.failed);
-    }
-});
-
-// preload image path
-$.imagePathPreloader('http://lorempixel.com/400/200/sports/1/', {
-    finish: function (status) {
-        console.log('preload finished, total=' + status.total + '; loaded=' + status.loaded + '; failed=' + status.failed);
-    }
+// open all anchors with a class "js-popup" in a new window and (if the browser supports it) disable resizing and scrolling
+$('a.js-popup').popup({
+    features: 'resizable=no,scrollbars=no'
 });
 ```
 
-The following functions can be defined as properies of the options object passed to the plugin:
+The following properies of the options object can be passed to the plugin:
 
-- load, called when a single image is loaded. The processed jQuery image object is passed as argument.
-- progress, called after an image is processed (loaded or can't be loaded). A status object with loaded, failed an total properties is passed as argument.
-- finish, when all the images are processed. A status object with loaded, failed an total properties is passed as argument.
-- error, called when the image can't be loaded. This is triggered by the error event of an img element. The processed jQuery image object is passed as argument.
+- name: A name for the new window. The name can be used as the target of links and forms using the target attribute of <a> or <form> elements. The name should not contain whitespace.
+- width: The width of the window.
+- height: The height of the window.
+- features: Extra [features](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#Position_and_size_features) that will be passed to the window.
 
-All functions are optional.
+The option object is optional. The defaults are:
 
-## Resources
-+ [stackoverflow.com](http://stackoverflow.com/questions/1977871/check-if-an-image-is-loaded-no-errors-in-javascript)
-+ [sajithmr.me](http://www.sajithmr.me/javascript-check-an-image-is-loaded-or-not/)
+```javascript
+var defaultOptions = {
+    name: 'New window',
+    width: 400,
+    height: 400,
+    features: ''
+};
+```
