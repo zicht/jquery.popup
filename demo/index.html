@@ -23,9 +23,10 @@
                 <pre>$('a.js-popup').popup([options]);</pre>
                 Available options:
                 <pre>{
-    name: 'New window',
+    name: 'My new window',
     width: 400,
-    height: 400
+    height: 800,
+    features: 'resizable=yes,scrollbars=yes,status=yes'
 }</pre>
                 <p>Lorem ipsum dolor sit amet, consectetur <a href="http://www.zicht.nl" class="js-popup">adipisicing</a> elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
                 <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
@@ -33,7 +34,9 @@
                 <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?</p>
 
                 <script type="text/javascript">
-                    $('.js-popup').popup();
+                    $('.js-popup').popup({
+                        features: 'resizable=no,scrollbars=no,status=no'
+                    });
                 </script>
             </article>
         </div>
