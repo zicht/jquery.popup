@@ -28,3 +28,6 @@ var defaultOptions = {
     features: ''
 };
 ```
+
+# Maintainer(s)
+* Joppe Aarts <joppe@zicht.nl>
